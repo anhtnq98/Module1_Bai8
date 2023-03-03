@@ -39,11 +39,17 @@
                     break;
 
                 case 2:
-                    if ((year % 4 === 0 && year % 100 !== 0 && year % 400 !== 0) || (year % 100 === 0 && year % 400 === 0)) {
-                        text = "Tháng có 29 ngày"
-                    } else {
-                        text = "Tháng có 28 ngày"
-                    }
+                    // if ((year % 4 === 0 && year % 100 !== 0 && year % 400 !== 0) || 
+                    // (year % 100 === 0 && year % 400 === 0)) {
+                    //     text = "Tháng này có 29 ngày vì là năm nhuận"
+                    // } else {
+                    //     text = "Tháng này có 28 ngày vì không phải năm nhuận"
+                    // }
+
+                    text = (year % 4 === 0 && year % 100 !== 0 && year % 400 !== 0) ||
+                        (year % 100 === 0 && year % 400 === 0) ? "Tháng này có 29 ngày vì là năm nhuận" :
+                        "Tháng này có 29 ngày vì là năm nhuận"
+
                     break;
                 default:
                     text = "Làm gì có cái tháng này!!"
