@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Điểm Trung Bình 3 Môn</title>
+</head>
+
+<body>
+    <script>
+        // let name = prompt ("Nhập tên của bạn");
+        // document.write(name);
+
+
+        // let toan = prompt ("Nhập điểm môn Toán");
+        // let van = prompt ("Nhập điểm môn Văn");
+        // let anh = prompt ("Nhập điểm môn Anh");
+        // document.write(toan/3+van/3+anh/3);
+
+
+        /*         let toan = +prompt("Nhập điểm môn Toán");
+                let van = +prompt("Nhập điểm môn Văn");
+                let anh = +prompt("Nhập điểm môn Anh");
+                let trungbinh = (toan + van + anh) / 3;
+                document.write('<br/>')
+                document.write(trungbinh); */
+
+        // Nhập điểm 3 môn Toán, Lý , Hóa sau đó tính điểm trung bình
+        // Nếu điểm trung bình từ 8 trở lên thì xác định loại giỏi
+        // 6.5 <= 8 là khá
+        // 8 <= DTB <= 10 xác định loại giỏi
+        // 5 <= DTB < 6.5 thì là TB
+        // DTB bé hơn 5 thì là yếu
+
+        let toan = +prompt("Nhập điểm môn Toán");
+        let ly = +prompt("Nhập điểm môn Lý");
+        let hoa = +prompt("Nhập điểm môn Hóa");
+        let trungbinh = toan/3 + ly/3 + hoa/3;
+
+        if(trungbinh >= 8 && trungbinh <= 10) {
+            document.write("Xuất xác quá! Có lời khen!")
+        } else if (6.5 <= trungbinh) {
+            document.write("Bạn gần xuất xác rồi!")
+        } else if (5 < trungbinh) {
+            document.write("Bạn thật bình thường")
+        } else {
+            document.write("Học chăm vào!!!!")
+        }
+
+    </script>
+</body>
+
+</html>

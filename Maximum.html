@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- tìm số lớn nhất trong 3 số -->
+</head>
+
+<body>
+    <script>
+
+        /*         let a = +prompt('Nhập số thứ nhất');
+                let b = +prompt('Nhập số thứ hai');
+                let c = +prompt('Nhập số thứ ba');
+                if (a === b && a > c) {
+                    alert(`Số thứ nhất là ${a} và số thứ hai là ${b} là hai số lớn nhất trong ba số ${a}, ${b} và ${c}`);
+                } else if (a === c && a > b) {
+                    alert(`Số thứ nhất là ${a} và số thứ ba là ${c} là hai số lớn nhất trong ba số ${a}, ${b} và ${c}`);
+                } else if (a === b && a < c) {
+                    alert(`Số thứ ba là ${c} là số lớn nhất trong ba số ${a}, ${b} và ${c}`);
+                } else if (a === c && a < b) {
+                    alert(`Số thứ hai là ${b} là số lớn nhất trong ba số ${a}, ${b} và ${c}`);
+                } else if (a === b && a === b && a === c) {
+                    alert(`Số thứ nhất là ${a}, số thứ hai là ${b} và số thứ ba là ${c} là ba số lớn nhất trong ba số ${a}, ${b} và ${c}`);
+                } else if (b === c && b > a) {
+                    alert(`Số thứ hai là ${b} và số thứ ba là ${c} là hai số lớn nhất trong ba số ${a}, ${b} và ${c}`);
+                } else if (b === c && b < a) {
+                    alert(`Số thứ nhất là ${a} là số lớn nhất trong ba số ${a}, ${b} và ${c}`);
+                } else if (a > b && a > c) {
+                    alert(`${a} là số lớn nhất trong ba số ${a}, ${b} và ${c}`);
+                } else if (a < b && b > c) {
+                    alert(`${b} là số lớn nhất trong ba số ${a}, ${b} và ${c}`);
+                } else {
+                    alert(`${c} là số lớn nhất trong ba số ${a}, ${b} và ${c}`);
+                } */
+
+        let a = +prompt("a:");
+        let b = +prompt("b:");
+        let c = +prompt("c:");
+        let max = a;
+
+        if (b > max) {
+            max = b;
+        }
+
+        if (c > max) {
+            max = c;
+        }
+
+        if (a == b && b == c) {
+            document.write("3 số bằng nhau.");
+        } else if (a == b && b == max && c < max) {
+            document.write(a + "  và  " + b + " là số lớn nhất");
+        } else if (a == c && c == max && b < max) {
+            document.write(a + " và " + c + " là số lớn nhất.");
+        } else if (b == c && c == max && a < max) {
+            document.write(b + " and " + c + " là số lớn nhất.");
+        } else if (a == max) {
+            document.write(a + " là số lớn nhất.");
+        } else if (b == max) {
+            document.write(b + " là số lớn nhất.");
+        } else {
+            document.write(c + " là số lớn nhất.");
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,140 @@
+<!-- Viết một chương trình tính tổng các số của một số nguyên bất kì -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tính tổng, hiệu, tích, thương 2 số bất kì</title>
+</head>
+
+<style>
+    .title {
+        background: linear-gradient(to bottom, #C8ECFF 0%, #E9D0FF 66%, #FFB9D7 100%);
+        text-align: center;
+        color: rgb(245, 15, 103);
+    }
+
+    .input-contain {
+        display: flex;
+        justify-content: center;
+    }
+
+    .input-contain div {
+        padding: 30px;
+        background-color: rgba(221, 225, 230, 0.58);
+    }
+
+    .input-contain div label {
+        font-family: 'Courier New', Courier, monospace;
+        font-weight: bold;
+        color: crimson;
+    }
+
+    .input-contain div input {
+        border: rgba(128, 128, 128, 0.408) solid 5px;
+        height: 100%;
+        border-radius: 20%;
+        text-align: center;
+    }
+
+    .button-contain {
+        display: flex;
+        justify-content: space-around;
+        padding: 20px;
+    }
+
+    .button-contain input {
+        border: gray solid 1px;
+        padding: 35px;
+        margin: 10px;
+        font-size: x-large;
+    }
+
+    .button-contain input:hover {
+        border: orangered solid 1px;
+        box-shadow: 0px 0px 30px 5px rgb(240, 107, 59);
+        transform: scale(130%);
+        transition-duration: 0.75s;
+    }
+
+    .total {
+        display: flex;
+        justify-content: center;
+
+    }
+
+    #total {
+        border: orange dashed 5px;
+        width: 50%;
+        padding: 10px;
+        text-align: center;
+    }
+</style>
+
+<body>
+    <h2 class="title">TỔNG, HIỆU, TÍCH, THƯƠNG</h2>
+    <div class="input-contain">
+        <div>
+            <label for="num1">Vui lòng chọn số thứ 1:</label>
+            <input id="num1" type="number" value="0">
+        </div>
+        <div>
+            <label for="num2">Vui lòng chọn số thứ 2:</label>
+            <input id="num2" type="number" value="0">
+        </div>
+    </div>
+
+    <div class="button-contain">
+        <input type="button" onclick="sum()" value="+">
+        <input type="button" onclick="difference()" value="-">
+        <input type="button" onclick="product()" value="x">
+        <input type="button" onclick="quotient()" value="%">
+
+    </div>
+    <div class="total">
+        <p id="total">Kết quả sẽ hiện tại đây</p>
+    </div>
+    <script>
+        function sum() {
+            // let a = parseInt(document.getElementById("num1").value);
+            // let b = parseInt(document.getElementById("num2").value);
+            let a = Number(document.getElementById("num1").value);
+            let b = Number(document.getElementById("num2").value);
+            // let sum = parseInt(a) + b;
+            let sum = a + b;
+            document.getElementById("total").innerHTML = "Tổng Vĩ Đại Là: " + sum;
+        }
+
+        function difference() {
+            // let a = parseInt(document.getElementById("num1").value);
+            // let b = parseInt(document.getElementById("num2").value);
+            let a = Number(document.getElementById("num1").value);
+            let b = Number(document.getElementById("num2").value);
+            let difference = a - b;
+            document.getElementById("total").innerHTML = "Hiệu Nhỏ Bé Là: " + difference;
+        }
+
+        function product() {
+            // let a = parseInt(document.getElementById("num1").value);
+            // let b = parseInt(document.getElementById("num2").value);
+            let a = Number(document.getElementById("num1").value);
+            let b = Number(document.getElementById("num2").value);
+            let product = a * b;
+            document.getElementById("total").innerHTML = "Tích Đoàn Kết Là: " + product;
+        }
+
+        function quotient() {
+            // let a = parseInt(document.getElementById("num1").value);
+            // let b = parseInt(document.getElementById("num2").value);
+            let a = Number(document.getElementById("num1").value);
+            let b = Number(document.getElementById("num2").value);
+            let product = a / b;
+            document.getElementById("total").innerHTML = "Thương Tự Lập Là: " + product;
+        }
+
+    </script>
+</body>
+
+</html>

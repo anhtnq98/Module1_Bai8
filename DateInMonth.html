@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Số ngày trong tháng</title>
+</head>
+
+<body>
+
+    <label for="">Năm</label>
+    <input id="inputYear" type="number">
+    <label for="">Tháng</label>
+    <input id="inputMonth" type="number">
+    <input type="button" onclick="dateInMonth()" value="Tính số ngày">
+    <p id="kq">Kết quả là</p>
+
+    <script>
+        function dateInMonth() {
+            let year = Number(document.getElementById("inputYear").value);
+            let month = Number(document.getElementById("inputMonth").value);
+            switch (month) {
+                case 1:
+                case 3:
+                case 5:
+                case 7:
+                case 8:
+                case 10:
+                case 12:
+                    text = "Tháng có 31 ngày"
+                    break;
+                case 4:
+                case 6:
+                case 9:
+                case 11:
+                    text = "Tháng có 30 ngày"
+                    break;
+
+                case 2:
+                    if ((year % 4 === 0 && year % 100 !== 0 && year % 400 !== 0) || (year % 100 === 0 && year % 400 === 0)) {
+                        text = "Tháng có 29 ngày"
+                    } else {
+                        text = "Tháng có 28 ngày"
+                    }
+                    break;
+                default:
+                    text = "Làm gì có cái tháng này!!"
+
+
+            }
+            document.getElementById("kq").innerHTML = text;
+        }
+    </script>
+</body>
+
+</html>

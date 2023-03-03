@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <!--     const không thay đổi và khai báo giá trị được
+
+    1. let không khai báo lại được nhưng vẫn gán giá trị lại được
+
+    2. var được phép khai báo lại và gán lại giá trị
+
+    3. let, const phạm vi hoạt động là scope {}, khi nó khai báo trong {} thì
+    chỉ được khai báo trong {} thôi.
+
+    4. var khai báo phạm vi toàn bộ function {}, nhưng nếu khai báo console.log(a)
+    trước var = a thì console.log sẽ bị undefined.
+
+    5. hoisting chỉ áp dụng với var còn let thì không. hoisting tứ là đưa phần
+    khai báo lên đầu.
+-->
+
+    <!-- 
+    Kiểu dữ liệu:
+js chia làm hai kiểu dữ liệu
+1. nguyên thủy (kiểu dữ liệu đơn giản);
+2. phức tạp
+1. nguyên thủy: string, boolean(Đúng hay Sai), number, symbol, null, undefined, 
+                NaN
+2. phức tạp: object, array, function 
+-->
+
+
+
+
+    <!-- Script chạy trước html nên phải đưa thẻ script xuống dưới cùng -->
+    <!-- <div id="hello">
+     id sẽ làm thay đổi khi nhập lệnh dưới script getElementById
+        hello cả lớp -->
+    <!-- </div>
+
+    <div id="test">Test thử</div>
+    <button onclick="changeText()">click</button> -->
+
+
+    <script>
+        // // đây là comment
+        // /*  đây là Comment
+        //         dài */
+
+        // // Debug: Tìm ra lỗi
+        // // Fixbud: Sửa lỗi
+
+
+
+        alert("Lỗi quá, chờ tí!");
+
+        prompt("Mời nhập tuổi");
+
+        let a = confirm("Bạn đủ 18 tuổi chưa?")
+
+        confirm("true");
+
+        document.getElementById("test").innerHTML = "ok!"
+
+
+        console.log("222");
+        function changeText() {
+            document.getElementById("hello").innerHTML = "hello nửa lớp!"
+        }
+
+        // console.log("helu" + a);
+        // console.log("helo", a);
+
+        let name = "Nam";//string
+        let k = (5 > 4);//boolean
+        let b = 9;
+        let c = null;
+        console.log(name);
+        console.log(localStorage.getItem("name"));
+
+        //Phân biệt undefine và null
+        //undefine tạo vùng nhớ lưu giữ liệu nhưng chưa có giá trị
+        //null là vùng nhớ lưu giữ liệu và có giá trị là null
+        //NaN (not a number)
+
+        /* 
+        đơn giản: typeof
+        cực kì phức tạp: console.log(Object.Prototype.toString.Call())
+         */
+        let listNumber = [1, 2, 5];
+        console.log(Object.prototype.toString.call(c));
+
+        //toántử số học: + - * / mũ(**)
+        //toántử so sánh: ==  >=  <=  !=  !== ...
+        //toántử gán: = , += , -= , *= , /= , %=
+        /* toán tử a++ ++a (a++ là kết thúc câu lệnh của chính nó mới tăng giá 
+                            trị lên 1) 
+                           (++a tăng giá trị lên 1 luôn)
+        */
+
+        /* toántử logic: && || (&& là cả hai đều đúng thì mới thực hiện)
+                               (|| là một trong hai sẽ đúng) */
+
+        let x = 10;
+        let y = 8;
+        if (x > 4 && y > 4) {
+            console.log("Hai số đều nhỏ hơn 4");
+        }
+
+        console.log(5 == "5"); // so sánh giá trị không tính kiểu dữ liệu trừ NaN
+        console.log(5 === "5"); // so sánh giá trị lẫn kiểu dữ liệu
+        
+    //  i+=5 (i=i+5) i=10
+
+        var z;
+
+        
+
+    </script>
+
+
+    <script src="./index.js"></script>
+</body>
+
+</html>
